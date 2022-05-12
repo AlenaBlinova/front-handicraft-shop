@@ -11,6 +11,7 @@ import HomePage from "./pages/Home";
 import InfoPage from "./pages/Info";
 import CategoriesPage from "./pages/Categories";
 import ContactsPage from "./pages/Contacts";
+import BasketPage from "./pages/Basket";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,9 +20,10 @@ ReactDOM.render(
         <Route path="/" element={<Page />}>
           <Route index element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/categories" element={<div>Categories</div>} />
-          <Route path="/info" element={<div>Info</div>} />
-          <Route path="/contacts" element={<div>Contacts</div>} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/info" element={<InfoPage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/basket" element={<BasketPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

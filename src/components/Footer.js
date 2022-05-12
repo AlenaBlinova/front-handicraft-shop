@@ -74,7 +74,6 @@ const Footer = () => {
             <Row>
                 <Col className="footer-element">
                     <div>&copy; 2022 - Name — интернет-магазин рукодельных изделий. Все права защищены. Доставка по всей России.</div>
-                    <div>Доставка по всей России.</div>
                 </Col>
             </Row>
         </Container>

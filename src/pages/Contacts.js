@@ -1,17 +1,15 @@
-import { Image } from "react-bootstrap";
-import Carousel from "react-bootstrap/Carousel";
-import slide1 from "../assets/logo.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const ContactsPage = () => (
-    <Carousel>
-        <Carousel.Item>
-            <Image src={slide1} />
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={slide1} />
-        </Carousel.Item>
-
-    </Carousel>
+    <Container id="contacts" fluid>
+            <Row>
+                <Col className="contacts-element">
+                    <h3>Контакты</h3>
+                </Col>
+            </Row>
+    </Container>
 )
 
 export default ContactsPage;

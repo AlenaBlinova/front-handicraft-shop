@@ -1,8 +1,10 @@
 #logo {
     width: 50px;
 }
-
+#navbar{
+    background-color: rgb(43, 160, 228) !important;
+}
 .nav-link.disabled {
-    color: rgba(0, 0, 0, .55) !important;
+    color: rgb(95, 95, 95, 0.55) !important;
     font-weight: bold;
 }

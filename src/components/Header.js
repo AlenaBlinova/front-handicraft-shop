@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logotip.png";
 import "./header.css";
 import useToken from "../hooks/useToken";
 
@@ -21,7 +21,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar bg="light" expand="sm">
+        <Navbar id="navbar" expand="sm">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img id="logo" src={logo} />
@@ -45,6 +45,9 @@ const Header = () => {
                             <NavDropdown.Item href="/categories/sewing">
                                 Шитьё
                             </NavDropdown.Item>
+                            <NavDropdown.Item href="/categories">
+                                Посмотреть все товары
+                            </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/info" disabled={pathname === "/info"}>
                             Доставка и оплата
@@ -54,6 +57,15 @@ const Header = () => {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
+                {!loggedIn ? (
+                    <Nav.Link as={Link} to="/basket" disabled={pathname === "/basket"}>
+                        Корзина
+                    </Nav.Link>
+                ) : (
+                    <Nav.Link onClick={onLogout}>
+                        Корзина
+                    </Nav.Link>
+                )}
                 {!loggedIn ? (
                     <Nav.Link as={Link} to="/login" disabled={pathname === "/login"}>
                         Вход
